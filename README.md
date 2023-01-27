@@ -15,7 +15,7 @@ yarn add smooth-horizontal-scroll
 ## Usage
 First, import the hook into your component:
 
-```
+```tsx
 import useSmoothHorizontalScroll from 'smooth-horizontal-scroll';
 ```
 
@@ -25,7 +25,7 @@ Then, use the hook in your component:
 
 You'll need to pass the `scrollContainerRef` to the element you want to apply the smooth scrolling to, and attach the `handleScroll` function to the `onScroll` event of that element.
 
-```
+```tsx
 <div ref={scrollContainerRef} onScroll={handleScroll}>
   {/* Your content here */}
 </div>
@@ -33,20 +33,20 @@ You'll need to pass the `scrollContainerRef` to the element you want to apply th
 
 You can use the `scrollTo` function to scroll to a specific position, or scroll by a specific amount.
 
-```
+```tsx
 <button onClick={() => scrollTo(-100)}>Scroll Left</button>
 <button onClick={() => scrollTo(100)}>Scroll Right</button>
 ```
 
 You can also check the isAtStart and isAtEnd state to disable buttons for scrolling if the user has reached the start or end of the content.
 
-```
+```tsx
 <button disabled={isAtStart} onClick={() => scrollTo(-100)}>Scroll Left</button>
 <button disabled={isAtEnd} onClick={() => scrollTo(100)}>Scroll Right</button>
 ```
 
 ### Full code example
-```
+```tsx
 import { useRef, useState } from "react";
 import useSmoothHorizontalScroll from "react-use-smooth-horizontal-scroll";
 
