@@ -21,7 +21,9 @@ import useSmoothHorizontalScroll from 'use-smooth-horizontal-scroll';
 
 Then, use the hook in your component:
 
-
+```tsx
+const { scrollContainerRef, handleScroll, scrollTo, isAtStart, isAtEnd } = useSmoothHorizontalScroll();
+```
 
 You'll need to pass the `scrollContainerRef` to the element you want to apply the smooth scrolling to, and attach the `handleScroll` function to the `onScroll` event of that element.
 
