@@ -5,18 +5,18 @@ A small utility hook for adding smooth horizontal scrolling to your React projec
 ## Installation
 
 ```
-npm install smooth-horizontal-scroll
+npm install use-smooth-horizontal-scroll
 ```
 or
 ```
-yarn add smooth-horizontal-scroll
+yarn add use-smooth-horizontal-scroll
 ```
 
 ## Usage
 First, import the hook into your component:
 
 ```tsx
-import useSmoothHorizontalScroll from 'smooth-horizontal-scroll';
+import useSmoothHorizontalScroll from 'use-smooth-horizontal-scroll';
 ```
 
 Then, use the hook in your component:
@@ -48,7 +48,7 @@ You can also check the isAtStart and isAtEnd state to disable buttons for scroll
 ### Full code example
 ```tsx
 import { useRef, useState } from "react";
-import useSmoothHorizontalScroll from "react-use-smooth-horizontal-scroll";
+import useSmoothHorizontalScroll from "use-smooth-horizontal-scroll";
 
 const MyComponent = () => {
   const { scrollContainerRef, handleScroll, scrollTo, isAtStart, isAtEnd } = useSmoothHorizontalScroll();
