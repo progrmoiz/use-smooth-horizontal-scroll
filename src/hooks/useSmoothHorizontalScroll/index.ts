@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import type { RefObject } from "react";
 
 interface UseSmoothHorizontalScroll {
-  scrollContainerRef: RefObject<HTMLElement | null>;
+  scrollContainerRef: RefObject<HTMLElement>;
   handleScroll: () => void;
   scrollTo: (shift: number) => void;
   isAtStart: boolean;
@@ -21,7 +21,7 @@ interface UseSmoothHorizontalScroll {
  * - isAtEnd: A boolean indicating whether
  */
 const useSmoothHorizontalScroll = (): UseSmoothHorizontalScroll => {
-  const scrollContainerRef = useRef<HTMLElement | null>(null);
+  const scrollContainerRef = useRef<HTMLElement>(null);
   const [isAtStart, setIsAtStart] = useState<boolean>(true);
   const [isAtEnd, setIsAtEnd] = useState<boolean>(false);
 
