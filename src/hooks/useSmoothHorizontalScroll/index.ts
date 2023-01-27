@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { RefObject } from "react";
 
 interface UseSmoothHorizontalScroll {
@@ -25,9 +25,16 @@ const useSmoothHorizontalScroll = (): UseSmoothHorizontalScroll => {
   const [isAtStart, setIsAtStart] = useState<boolean>(true);
   const [isAtEnd, setIsAtEnd] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (!scrollContainerRef.current) return;
+    setIsAtEnd(
+      scrollContainerRef.current.scrollWidth === scrollContainerRef.current.offsetWidth
+    );
+  }, [scrollContainerRef]);
+
   const handleScroll = () => {
     if (!scrollContainerRef.current) return;
-    
+
     setIsAtStart(scrollContainerRef.current?.scrollLeft === 0);
     setIsAtEnd(
       Math.floor(
@@ -36,6 +43,7 @@ const useSmoothHorizontalScroll = (): UseSmoothHorizontalScroll => {
       ) <= scrollContainerRef.current?.offsetWidth
     );
   };
+
 
   const scrollTo = (shift: number) => {
     scrollContainerRef.current?.scrollTo({
