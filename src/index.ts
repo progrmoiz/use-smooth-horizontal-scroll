@@ -1,1 +1,3 @@
-export { default as useSmoothHorizontalScroll } from './hooks/useSmoothHorizontalScroll/';
+import useSmoothHorizontalScroll from './hooks/useSmoothHorizontalScroll/';
+
+export default useSmoothHorizontalScroll;
