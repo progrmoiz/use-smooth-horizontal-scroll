@@ -1,6 +1,6 @@
 {
   "name": "use-smooth-horizontal-scroll",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "This package provides a custom hook for smooth horizontal scrolling in React. The hook allows for setting a scroll container, handling scroll events, scrolling to a specific point, and determining if the user is at the start or end of the scrollable area.",
   "author": "progrmoiz",
   "license": "MIT",
